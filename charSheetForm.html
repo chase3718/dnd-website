@@ -1,0 +1,577 @@
+<html>
+
+<head>
+    <meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="charSheetStyles.css">
+    <script type="text/javascript" src="functions.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid" style="margin: auto; margin-top: 10px;">
+        <form name="charSheet" style="margin: auto; margin-top: 10px;transform:scale(2);float: left" method="GET"
+            action="charSheetFormFilled.html">
+            <div class="shadow p-3 mb-5 bg-white"
+                style="position:absolute;margin:auto;width:612px;height:792px;overflow:hidden;">
+                <div style="position:absolute;left:0px;top:0px">
+                    <img src="images/background1.jpg" width=612 height=792></div>
+                <div style="position:absolute;left:270.72px;top:63.25px" class="cls_002">
+                    <span class="cls_002">CLASS &
+                        LEVEL</span>
+                </div>
+                <div style="position:absolute;left:270.72px;top:46.5px" class="cls_002">
+                    <input style="width:80px;" type="text" name="classAndLevel">
+                </div>
+                <div style="position:absolute;left:383.48px;top:63.25px" class="cls_002">
+                    <span class="cls_002">BACKGROUND</span>
+                </div>
+                <div style="position:absolute;left:383.48px;top:46.5px" class="cls_002">
+                    <input style="width:80px;" type="text" name="background">
+                </div>
+                <div style="position:absolute;left:480.24px;top:63.25px" class="cls_002">
+                    <span class="cls_002">PLAYER
+                        NAME</span>
+                </div>
+                <div style="position:absolute;left:480.24px;top:46.5px" class="cls_002">
+                    <input style="width:80px;" type="text" name="playerName">
+                </div>
+                <div style="position:absolute;left:69.07px;top:89.52px" class="cls_002">
+                    <span class="cls_002">CHARACTER
+                        NAME</span>
+                </div>
+                <div style="position:absolute;left:69.07px;top:67.25px" class="cls_002">
+                    <input style="width:120px;" type="text" name="characterName">
+                </div>
+                <div style="position:absolute;left:270.72px;top:89.33px" class="cls_002">
+                    <span class="cls_002">RACE</span>
+                </div>
+                <div style="position:absolute;left:270.72px;top:72.58px" class="cls_002">
+                    <input style="width:80px;" type="text" name="race">
+                </div>
+                <div style="position:absolute;left:383.48px;top:89.33px" class="cls_002">
+                    <span class="cls_002">ALIGNMENT</span>
+                </div>
+                <div style="position:absolute;left:383.48px;top:72.58px" class="cls_002">
+                    <input style="width:80px;" type="text" name="alignment">
+                </div>
+                <div style="position:absolute;left:480.24px;top:89.52px" class="cls_002">
+                    <span class="cls_002">EXPERIENCE
+                        POINTS</span>
+                </div>
+                <div style="position:absolute;left:480.24px;top:72.58px" class="cls_002">
+                    <input style="width:20px;" type="number" name="experience" min=0>
+                </div>
+                <div style="position:absolute;left:146.36px;top:136.00px" class="cls_003">
+                    <span class="cls_003">INSPIRATION</span>
+                </div>
+                <div style="position:absolute;left:102.36px;top:133.50px" class="cls_003">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="inspirationCheck" style="width:10px;height:10px;"
+                            name="inspiration" />
+                        <label for="inspirationCheck" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:41.14px;top:144.91px" class="cls_004">
+                    <span class="cls_004">STRENGTH</span>
+                </div>
+                <div style="position:absolute;left:42.5px;top:151.91px" class="cls_004">
+                    <input style="width:30px;height:30px;font-size:25px" type="number" name="strength" min=0 max=20>
+                </div>
+                <div style="position:absolute;left:236.71px;top:165.38px" class="cls_004">
+                    <span class="cls_004">ARMOR</span>
+                </div>
+                <div style="position:absolute;left:235.71px;top:141.38px" class="cls_004">
+                    <input style="width:25px;height:25px;font-size:20px" type="number" name="armorClass" min=0>
+                </div>
+                <div style="position:absolute;left:135.60px;top:173.70px" class="cls_003">
+                    <span class="cls_003">PROFICIENCY
+                        BONUS</span>
+                </div>
+                <div style="position:absolute;left:97.60px;top:169.70px" class="cls_003">
+                    +<input style="width:15px;height:15px;font-size:12px" type="number" name="proficiencyBonus" min=0>
+                </div>
+                <div style="position:absolute;left:238.79px;top:171.38px" class="cls_004">
+                    <span class="cls_004">CLASS</span>
+                </div>
+                <div style="position:absolute;left:288.45px;top:174.08px" class="cls_004">
+                    <span class="cls_004">INITIATIVE</span>
+                </div>
+                <div style="position:absolute;left:288.8px;top:140.08px" class="cls_004">
+                    <input style="width:30px;height:30px;font-size:25px" type="number" name="initiative" min=0 max=20>
+                </div>
+                <div style="position:absolute;left:352.99px;top:174.08px" class="cls_004">
+                    <span class="cls_004">SPEED</span>
+                </div>
+                <div style="position:absolute;left:347.5px;top:140.08px" class="cls_004">
+                    <input style="width:30px;height:30px;font-size:25px" type="number" name="speed" min=0>
+                </div>
+                <div style="position:absolute;left:467.72px;top:188.89px" class="cls_005">
+                    <span class="cls_005">PERSONALITY
+                        TRAITS</span>
+                </div>
+                <div style="position:absolute;left:420.72px;top:140.89px" class="cls_005">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <textarea class="form-control" aria-label="With textarea"
+                            style=" padding:0; width:149px; height:40px;font-size:6pt" name="personality"></textarea>
+                    </div>
+                </div>
+                <div style="position:absolute;left:229.76px;top:200.12px" class="cls_006">
+                    <span class="cls_006">Hit Point
+                        Maximum</span>
+                </div>
+                <div style="position:absolute;left:290.76px;top:198.12px" class="cls_006">
+                    <input style="width:50px;height:10px;font-size:9px" type="number" name="hitPointMax" min=0>
+                </div>
+                <div style="position:absolute;left:131.00px;top:206.64px" class="cls_002">
+                    <span class="cls_002">Strength</span>
+                </div>
+                <div style="position:absolute;left:100.00px;top:205.64px" class="cls_002">
+                    <!-- <input class="round" type="checkbox" class="inspiration"> -->
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="strSavingCheck" style="width:10px;height:10px;" name="strSaving" />
+                        <label for="strSavingCheck" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:41.48px;top:216.76px" class="cls_004">
+                    <span class="cls_004">DEXTERITY</span>
+                </div>
+                <div style="position:absolute;left:42.5px;top:223.76px" class="cls_004">
+                    <input style="width:30px;height:30px;font-size:25px" type="number" name="dexterity" min=0 max=20>
+                </div>
+                <div style="position:absolute;left:131.00px;top:220.14px" class="cls_002">
+                    <span class="cls_002">Dexterity</span>
+                </div>
+                <div style="position:absolute;left:100.00px;top:219.14px" class="cls_002">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="dexSavingCheck" style="width:10px;height:10px;" name="dexSaving" />
+                        <label for="dexSavingCheck" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:131.00px;top:233.64px" class="cls_002">
+                    <span class="cls_002">Constitution</span>
+                </div>
+                <div style="position:absolute;left:100.00px;top:232.64px" class="cls_002">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="conSavingCheck" style="width:10px;height:10px;" name="conSaving" />
+                        <label for="conSavingCheck" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:273.92px;top:243.88px" class="cls_004">
+                    <span class="cls_004">CURRENT HIT
+                        POINTS</span>
+                </div>
+                <div style="position:absolute;left:230.92px;top:209.88px" class="cls_004">
+                    <input style="width:50px;height:35px;font-size:33px" type="number" name="curHitPoints" min=0>
+                </div>
+                <div style="position:absolute;left:486.01px;top:243.91px" class="cls_005">
+                    <span class="cls_005">IDEALS</span>
+                </div>
+                <div style="position:absolute;left:420.72px;top:210.89px" class="cls_005">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <textarea class="form-control" aria-label="With textarea"
+                            style=" padding:0; width:149px; height:30px;font-size:6pt" name="ideals"></textarea>
+                    </div>
+                </div>
+                <div style="position:absolute;left:131.00px;top:247.14px" class="cls_002">
+                    <span class="cls_002">Intelligence</span>
+                </div>
+                <div style="position:absolute;left:100.00px;top:246.14px" class="cls_002">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="intSavingCheck" style="width:10px;height:10px;" name="intSaving" />
+                        <label for="intSavingCheck" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:131.00px;top:260.64px" class="cls_002">
+                    <span class="cls_002">Wisdom</span>
+                </div>
+                <div style="position:absolute;left:100.00px;top:259.64px" class="cls_002">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="wisSavingCheck" style="width:10px;height:10px;" name="wisSaving" />
+                        <label for="wisSavingCheck" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:131.00px;top:274.14px" class="cls_002">
+                    <span class="cls_002">Charisma</span>
+                </div>
+                <div style="position:absolute;left:100.00px;top:273.14px" class="cls_002">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="chrSavingCheck" style="width:10px;height:10px;" name="chrSaving" />
+                        <label for="chrSavingCheck" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:34.29px;top:288.01px" class="cls_004">
+                    <span class="cls_004">CONSTITUTION</span>
+                </div>
+                <div style="position:absolute;left:42.5px;top:295.01px" class="cls_004">
+                    <input style="width:30px;height:30px;font-size:25px" type="number" name="constitution" min=0 max=20>
+                </div>
+                <div style="position:absolute;left:124.63px;top:290.20px" class="cls_004">
+                    <span class="cls_004">SAVING
+                        THROWS</span></div>
+                <div style="position:absolute;left:269.86px;top:296.83px" class="cls_004">
+                    <span class="cls_004">TEMPORARY
+                        HIT
+                        POINTS</span>
+                </div>
+                <div style="position:absolute;left:230.92px;top:261.83px" class="cls_004">
+                    <input style="width:50px;height:35px;font-size:33px" type="number" name="tempHitPoint" min=0>
+                </div>
+                <div style="position:absolute;left:485.48px;top:299.75px" class="cls_005">
+                    <span class="cls_005">BONDS</span>
+                </div>
+                <div style="position:absolute;left:420.48px;top:265.75px" class="cls_005">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <textarea class="form-control" aria-label="With textarea"
+                            style=" padding:0; width:149px; height:30px;font-size:6pt" name="bonds"></textarea>
+                    </div>
+                </div>
+                <div style="position:absolute;left:131.00px;top:321.90px" class="cls_002">
+                    <span class="cls_002">Acrobatics
+                    </span><span class="cls_007">(Dex)</span>
+                </div>
+                <div style="position:absolute;left:100.00px;top:320.90px" class="cls_002">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="acroSkills" style="width:10px;height:10px;" name="acroSkills" />
+                        <label for="acroSkills" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:229.76px;top:320.70px" class="cls_006">
+                    <span class="cls_006">Total</span>
+                </div>
+                <div style="position:absolute;left:246.76px;top:318.70px" class="cls_006">
+                    <input style="width:30px;height:10px;font-size:9px" type="text" name="hitDiceTotal" min=0>
+                </div>
+                <div style="position:absolute;left:314.77px;top:323.18px" class="cls_005">
+                    <span class="cls_005">SUCCESSES</span>
+                </div>
+                <div style="position:absolute;left:345.77px;top:322.1px" class="cls_005">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="succ1" style="width:10px;height:10px;" name="succ1" />
+                        <label for="succ1" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:358.5px;top:322.1px" class="cls_005">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="succ2" style="width:10px;height:10px;" name="succ2" />
+                        <label for="succ2" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:371.5px;top:322.1px" class="cls_005">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="succ3" style="width:10px;height:10px;" name="succ3" />
+                        <label for="succ3" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:131.00px;top:335.40px" class="cls_002">
+                    <span class="cls_002">Animal
+                        Handling
+                    </span><span class="cls_007">(Wis)</span>
+                </div>
+                <div style="position:absolute;left:100.00px;top:334.40px" class="cls_002">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="animalHandling" style="width:10px;height:10px;"
+                            name="animalHandling" />
+                        <label for="animalHandling" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:319.80px;top:338.18px" class="cls_005">
+                    <span class="cls_005">FAILURES</span>
+                </div>
+                <div style="position:absolute;left:345.77px;top:337.1px" class="cls_005">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="fail1" style="width:10px;height:10px;" name="fail1" />
+                        <label for="fail1" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:358.5px;top:337.1px" class="cls_005">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="fail2" style="width:10px;height:10px;" name="fail2" />
+                        <label for="fail2" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:371.5px;top:337.1px" class="cls_005">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="fail3" style="width:10px;height:10px;" name="fail3" />
+                        <label for="fail3" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:131.00px;top:348.90px" class="cls_002">
+                    <span class="cls_002">Arcana
+                    </span><span class="cls_007">(Int)</span>
+                </div>
+                <div style="position:absolute;left:100.00px;top:347.90px" class="cls_002">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="arcana" style="width:10px;height:10px;" name="arcana" />
+                        <label for="arcana" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:251.51px;top:353.51px" class="cls_005">
+                    <span class="cls_005">HIT
+                        DICE</span>
+                </div>
+                <div style="position:absolute;left:330.55px;top:353.51px" class="cls_005">
+                    <span class="cls_005">DEATH
+                        SAVES</span></div>
+                <div style="position:absolute;left:486.57px;top:354.48px" class="cls_005">
+                    <span class="cls_005">FLAWS</span>
+                </div>
+                <div style="position:absolute;left:420.48px;top:320.48px" class="cls_005">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <textarea class="form-control" aria-label="With textarea"
+                            style=" padding:0; width:149px; height:30px;font-size:6pt" name="flaws"></textarea>
+                    </div>
+                </div>
+                <div style="position:absolute;left:35.99px;top:359.92px" class="cls_004">
+                    <span class="cls_004">INTELLIGENCE</span>
+                </div>
+                <div style="position:absolute;left:42.5px;top:367px" class="cls_004">
+                    <input style="width:30px;height:30px;font-size:25px" type="number" name="intelligence" min=0 max=20>
+                </div>
+                <div style="position:absolute;left:131.00px;top:362.40px" class="cls_002">
+                    <span class="cls_002">Athletics
+                    </span><span class="cls_007">(Str)</span>
+                </div>
+                <div style="position:absolute;left:100.00px;top:361.40px" class="cls_002">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="athletics" style="width:10px;height:10px;" name="athletics" />
+                        <label for="athletics" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:131.00px;top:375.90px" class="cls_002">
+                    <span class="cls_002">Deception
+                    </span><span class="cls_007">(Cha)</span>
+                </div>
+                <div style="position:absolute;left:100.00px;top:374.90px" class="cls_002">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="deception" style="width:10px;height:10px;" name="deception" />
+                        <label for="deception" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:223.53px;top:383.56px" class="cls_008">
+                    <span class="cls_008">NAME</span>
+                </div>
+                <div style="position:absolute;left:291.21px;top:383.56px" class="cls_008">
+                    <span class="cls_008">ATK BONUS
+                        DAMAGE/TYPE</span></div>
+                <div style="position:absolute;left:131.00px;top:389.40px" class="cls_002">
+                    <span class="cls_002">History
+                    </span><span class="cls_007">(Int)</span>
+                </div>
+                <div style="position:absolute;left:100.00px;top:388.40px" class="cls_002">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="history" style="width:10px;height:10px;" name="history" />
+                        <label for="history" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:131.00px;top:402.90px" class="cls_002">
+                    <span class="cls_002">Insight
+                    </span><span class="cls_007">(Wis)</span>
+                </div>
+                <div style="position:absolute;left:100.00px;top:401.90px" class="cls_002">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="insight" style="width:10px;height:10px;" name="insight" />
+                        <label for="insight" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:131.00px;top:416.40px" class="cls_002">
+                    <span class="cls_002">Intimidation
+                    </span><span class="cls_007">(Cha)</span>
+                </div>
+                <div style="position:absolute;left:100.00px;top:415.40px" class="cls_002">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="intimidation" style="width:10px;height:10px;" name="intimidation" />
+                        <label for="intimidation" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:44.11px;top:431.47px" class="cls_004">
+                    <span class="cls_004">WISDOM</span>
+                </div>
+                <div style="position:absolute;left:42.5px;top:438.47px" class="cls_004">
+                    <input style="width:30px;height:30px;font-size:25px" type="number" name="intelligence" min=0 max=20>
+                </div>
+                <div style="position:absolute;left:131.00px;top:429.90px" class="cls_002">
+                    <span class="cls_002">Investigation
+                    </span><span class="cls_007">(Int)</span>
+                </div>
+                <div style="position:absolute;left:100.00px;top:428.90px" class="cls_002">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="investigation" style="width:10px;height:10px;"
+                            name="investigation" />
+                        <label for="investigation" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:131.00px;top:443.40px" class="cls_002">
+                    <span class="cls_002">Medicine
+                    </span><span class="cls_007">(Wis)</span>
+                </div>
+                <div style="position:absolute;left:100.00px;top:442.40px" class="cls_002">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="medicine" style="width:10px;height:10px;" name="medicine" />
+                        <label for="medicine" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:131.00px;top:456.90px" class="cls_002">
+                    <span class="cls_002">Nature
+                    </span><span class="cls_007">(Int)</span>
+                </div>
+                <div style="position:absolute;left:100.00px;top:455.90px" class="cls_002">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="nature" style="width:10px;height:10px;" name="nature" />
+                        <label for="nature" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:131.00px;top:470.40px" class="cls_002">
+                    <span class="cls_002">Perception
+                    </span><span class="cls_007">(Wis)</span>
+                </div>
+                <div style="position:absolute;left:100.00px;top:469.40px" class="cls_002">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="perception" style="width:10px;height:10px;" name="perception" />
+                        <label for="perception" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:131.00px;top:483.90px" class="cls_002">
+                    <span class="cls_002">Performance
+                    </span><span class="cls_007">(Cha)</span>
+                </div>
+                <div style="position:absolute;left:100.00px;top:482.90px" class="cls_002">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="performance" style="width:10px;height:10px;" name="performance" />
+                        <label for="performance" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:131.00px;top:497.40px" class="cls_002">
+                    <span class="cls_002">Persuasion
+                    </span><span class="cls_007">(Cha)</span>
+                </div>
+                <div style="position:absolute;left:100.00px;top:496.40px" class="cls_002">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="persuasion" style="width:10px;height:10px;" name="persuasion" />
+                        <label for="persuasion" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:41.50px;top:502.88px" class="cls_004">
+                    <span class="cls_004">CHARISMA</span>
+                </div>
+                <div style="position:absolute;left:42.5px;top:509.88px" class="cls_004">
+                    <input style="width:30px;height:30px;font-size:25px" type="number" name="charisma" min=0 max=20>
+                </div>
+                <div style="position:absolute;left:131.00px;top:510.90px" class="cls_002">
+                    <span class="cls_002">Religion
+                    </span><span class="cls_007">(Int)</span>
+                </div>
+                <div style="position:absolute;left:100.00px;top:509.90px" class="cls_002">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="religion" style="width:10px;height:10px;" name="religion" />
+                        <label for="religion" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:131.00px;top:524.40px" class="cls_002">
+                    <span class="cls_002">Sleight of
+                        Hand
+                    </span><span class="cls_007">(Dex)</span>
+                </div>
+                <div style="position:absolute;left:100.00px;top:523.40px" class="cls_002">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="sleightOfHand" style="width:10px;height:10px;"
+                            name="sleightOfHand" />
+                        <label for="sleightOfHand" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:131.00px;top:537.90px" class="cls_002">
+                    <span class="cls_002">Stealth
+                    </span><span class="cls_007">(Dex)</span>
+                </div>
+                <div style="position:absolute;left:100.00px;top:536.90px" class="cls_002">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="stealth" style="width:10px;height:10px;" name="stealth" />
+                        <label for="stealth" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:131.00px;top:551.40px" class="cls_002">
+                    <span class="cls_002">Survival
+                    </span><span class="cls_007">(Wis)</span>
+                </div>
+                <div style="position:absolute;left:100.00px;top:550.40px" class="cls_002">
+                    <div class="round" style="width:10px;height:10px;">
+                        <input type="checkbox" id="survival" style="width:10px;height:10px;" name="survival" />
+                        <label for="Survival" style="width:10px;height:10px;"></label>
+                    </div>
+                </div>
+                <div style="position:absolute;left:140.03px;top:569.59px" class="cls_004">
+                    <span class="cls_004">SKILLS</span>
+                </div>
+                <div style="position:absolute;left:269.21px;top:569.59px" class="cls_004">
+                    <span class="cls_004">ATTACKS &
+                        SPELLCASTING</span>
+                </div>
+                <div style="position:absolute;left:88.47px;top:595.77px" class="cls_005">
+                    <span class="cls_005">PASSIVE
+                        WISDOM
+                        (PERCEPTION)</span>
+                </div>
+                <div style="position:absolute;left:214.00px;top:604.01px" class="cls_008">
+                    <span class="cls_008">CP</span>
+                </div>
+                <div style="position:absolute;left:230.00px;top:599.5px" class="cls_008">
+                    <input style="width:25px;height:15px;font-size:12px" type="number" name="cp" min=0>
+                </div>
+                <div style="position:absolute;left:214.20px;top:629.72px" class="cls_008">
+                    <span class="cls_008">SP</span>
+                </div>
+                <div style="position:absolute;left:230.20px;top:625.9px" class="cls_008">
+                    <input style="width:25px;height:15px;font-size:12px" type="number" name="sp" min=0>
+                </div>
+                <div style="position:absolute;left:214.19px;top:655.80px" class="cls_008">
+                    <span class="cls_008">EP</span>
+                </div>
+                <div style="position:absolute;left:230.19px;top:651.80px" class="cls_008">
+                    <input style="width:25px;height:15px;font-size:12px" type="number" name="ep" min=0>
+                </div>
+                <div style="position:absolute;left:213.70px;top:681.87px" class="cls_008">
+                    <span class="cls_008">GP</span>
+                </div>
+                <div style="position:absolute;left:230.19px;top:677.5px" class="cls_008">
+                    <input style="width:25px;height:15px;font-size:12px" type="number" name="gp" min=0>
+                </div>
+                <div style="position:absolute;left:214.14px;top:707.59px" class="cls_008">
+                    <span class="cls_008">PP</span>
+                </div>
+                <div style="position:absolute;left:230.19px;top:703.59px" class="cls_008">
+                    <input style="width:25px;height:15px;font-size:12px" type="number" name="pp" min=0>
+                </div>
+                <div style="position:absolute;left:61.68px;top:756.86px" class="cls_004">
+                    <span class="cls_004">OTHER
+                        PROFICIENCIES & LANGUAGES</span></div>
+                <div style="position:absolute;left:288.46px;top:756.86px" class="cls_004">
+                    <span class="cls_004">EQUIPMENT</span>
+                </div>
+                <div style="position:absolute;left:466.48px;top:757.04px" class="cls_004">
+                    <span class="cls_004">FEATURES &
+                        TRAITS</span></div>
+                <div style="position:absolute;left:174.52px;top:774.18px" class="cls_009">
+                    <span class="cls_009">TM & © 2014
+                        Wizards of the Coast LLC. Permission is granted to photocopy this document for personal
+                        use.</span>
+                </div>
+                <div style="position:absolute;left:514.52px;top:10.18px" class="cls_009">
+                    <button type="submit">Create Character</button>
+                </div>
+
+            </div>
+
+
+        </form>
+    </div>
+</body>
+
+</html>
